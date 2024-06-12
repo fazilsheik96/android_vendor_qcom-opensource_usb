@@ -192,6 +192,7 @@ fi
 #
 # Initialize multi uvc conifguration.
 #
+if [ "$(getprop ro.product.board)" == "kona" ]; then
 for i in 1 2 3 4 5 6 7 8 9 10
 do
 	if [ -d /config/usb_gadget/g1/functions/uvc.$i ]; then
@@ -236,6 +237,7 @@ do
 		ln -s streaming/header/h streaming/class/ss/
 	fi
 done
+fi
 
 if [ -d /config/usb_gadget/g1/functions/uac2.0 ]; then
 	setprop vendor.usb.uac2.function.init 1
