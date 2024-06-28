@@ -133,6 +133,8 @@ on post-fs-data
     mkdir /config/usb_gadget/g2/configs/b.1 0770
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770
     mkdir /config/usb_gadget/g2/configs/b.1/strings/0x409 0770
+    chown root system  config/usb_gadget/g1/configs/b.1
+    chown root system  config/usb_gadget/g1/configs/b.1/strings/0x409
     write /config/usb_gadget/g1/configs/b.1/MaxPower 900
     write /config/usb_gadget/g1/os_desc/b_vendor_code 0x1
     write /config/usb_gadget/g1/os_desc/qw_sign "MSFT100"
